@@ -1,0 +1,21 @@
+apply plugin: 'java'
+
+defaultTasks << 'compileJava'
+
+sourceSets {
+  main { 
+    java { 
+      srcDir projectDir
+      classesDir = projectDir
+    }
+  }
+}
+
+clean.doLast { 
+  fileTree {
+    from projectDir
+    include '**/*.class'
+  }.each { f->
+    delete(f)
+  }
+}
