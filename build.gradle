@@ -1,21 +1,25 @@
-apply plugin: 'java'
+import net.bosatsu.gradle.*
 
-defaultTasks << 'compileJava'
+apply plugin: 'netkernel'
 
-sourceSets {
-  main { 
-    java { 
-      srcDir projectDir
-      classesDir = projectDir
-    }
-  }
+nkmodule.modules = [
+	"${project.projectDir}/module.xml"
+]
+
+dependencies {
+	groovy localGroovy()
 }
 
-clean.doLast { 
-  fileTree {
-    from projectDir
-    include '**/*.class'
-  }.each { f->
-    delete(f)
-  }
+buildscript {
+	repositories {
+		mavenLocal()
+	}
+	
+	dependencies {
+        classpath group: 'net.bosatsu.gradle', name: 'nk-gradle-plugin', version: '0.0.5-SNAPSHOT'
+	}
+}
+
+nkgreeting {
+    greeting = 'You are rocking me'
 }

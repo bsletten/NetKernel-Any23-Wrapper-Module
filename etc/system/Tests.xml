@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tests>
+	<test>
+		<id>test:urn:net:bosatsu:rdf:any23</id>
+		<name>Any23 Wrapper</name>
+		<desc>A NetKernel Wrapper around the Any23 RDF conversion engine from DERI</desc>
+		<uri>res:/resources/test/testlist.xml</uri>
+	</test>
+</tests>

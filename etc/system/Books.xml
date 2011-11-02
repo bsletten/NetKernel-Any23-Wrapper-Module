@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+	<book>
+		<id>book:urn:net:bosatsu:rdf:any23</id>
+		<title>Any23 Wrapper</title>
+		<desc>A NetKernel Wrapper around the Any23 RDF conversion engine from DERI</desc>
+		<toc>
+			<item id="urn:net:bosatsu:rdf:any23:guide"/>
+			<item id="urn:net:bosatsu:rdf:any23:example"/>
+		</toc>
+	</book>
+</books>
